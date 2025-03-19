@@ -1,20 +1,24 @@
 const program = document.querySelector('#prog')
-const run_button = document.querySelector('#run_button')
-let Qubit = {
+const runButton = document.querySelector('#run_button')
+let qubit = {
   val: 0
 }
-let qubit = Qubit.new()
-function run_gate(type, qubit) {
+function runGate(type, qubit) {
   val = qubit.val
   if (type == 'x' || type == 'y') {
     if (typeof val == Number) {
-      return Math.abs(val - 1)
+      console.log(Math.abs(val - 1))
     } 
   }
 }
 
-qubit.val = run_gate('x', qubit)
-
-console.log(qubit.val)
+function runScript() {
+  progString = program.value.split(',')
+  for (const gate in progString) {
+    runGate(gate,qubit)
+  }
+}
+runButton.addEventListener('click', runScript)
+// qubit.val = runGgate('x', qubit)
 
 
