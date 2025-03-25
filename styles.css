@@ -1,0 +1,21 @@
+#program {
+    color: rgb(0, 0, 0);
+    /* border-radius: 10px; */
+    border-width: 2px;
+    text-align: center;
+}
+
+#run_button {
+    color: rgb(18, 78, 44);
+    background-color: rgba(0, 122, 10, 0.527);
+    /* border-radius: 10px; */
+    border-color: rgb(0, 0, 0, 0.527);
+}
+
+#prog {
+    text-align: center;
+}
+
+.description {
+    content: 'microsoft-ds'
+}

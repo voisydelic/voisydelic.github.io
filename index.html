@@ -3,11 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quantum Simulator</title>
   <script src="code/javascript.js" defer></script>
+  <link rel="stylesheet" href="">
 </head>
-<body>
-  <textarea name="program" id="prog" cols="30"></textarea>
-  <button id = "run_button" style="color: blue; background-color: aqua; border-radius: 10px;">Run!</button>
+<body style="background-color: rgb(0, 88, 38);
+   display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap">
+   <div style="display: flex; flex-direction: row; justify-content: center;">
+     <button style="background-color: rgb(42, 163, 94);" id="X">Pauli X</button>
+     <button style="background-color: rgb(42, 163, 94);" id="Y">Pauli Y</button>
+     <button style="background-color: rgb(42, 163, 94);" id="H">Hadamard</button>
+   </div>
+   <div name="program" id="prog" cols="30" style="align-self:center; color:rgb(42, 163, 94);"></div>
+  <button id = "run_button">Run Script</button>
+  <div style= "height: 50px"></div>
+  <div id="output" style="color: rgb(42, 163, 94); text-align: center;"></div>
+  <pre>Qubits (a portmanteau of "Quantum Bits") are binary values, either 1 or 0.<s></s>
+The unique thing about qubits is that they can be both at the same time. To put it simply, if a qubit is
+"initialized", there is a certain percent chance the the qubit is 0, and another chance it becomes 1.
+This means, until you observe it and find out what it happened to become, it could be either one of those, and
+theoretically both. Above is a simulator for a qubit. There are 3 operations available at the moment, Hadamard, Pauli X, and Pauli Y.
+Press on operations to add them to your program. "Pauli X" and "Pauli Y" are basic inverters, changing a 1 into 0 and vice versa.
+"Hadamard", however, puts the qubit into a state of probability, making it a 50/50 chance of the qubit changing values, or not.
+It gives an equally likely possibilty of each outcomes. Set up a series of gates, as long or short as you want. Then, press "Run Script" apply the gates to
+your qubit one by one. The qubit's new value will be displayed above. 
+The qubit starts as 0.</pre>
+
+  
 </body>
 </html>
